@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="main.css" />
+    
+        <link
+          href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng|Titillium+Web|Varela+Round&display=swap"
+          rel="stylesheet"
+        />
+    
+        <nav>   
+          <img src="images/profilePic.jpg" alt="Profile Picture" />
+          <p id= "headname">Bruk Mekonnen</p>
+          <ul>
+            <li><a href="index.html"> HOME</a></li>
+            <li><a href="about.html"> ABOUT ME </a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="previous_works.html">WORK EXPERIENCE</a></li>
+            <li><a href="blog.html"> <u>BLOG</u> </a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </head>
+      <body>
+        <div class="main">
+            <div class="home">
+                <div class="blog" id="blog">
+                    <p class = "namestart">Blog</p> 
+                    <h2>Longest Palindromic Substring </h2>
+                    <p class="nameabout">Given a string, find the maximum length contiguous substring of it that is also a palindrome. For example, 
+                        the longest palindromic substring of “bananas” is “anana”, and the longest palindromic substring of “abdcbcdbdcbbc” is “bdcbcdb”.
+                    <br><br>
+                    Note that the longest palindromic substring is not guaranteed to be unique. For example, there is no palindromic substring in a string 
+                    abracadabra with a length greater than three. Still, there are two palindromic substrings with length three, namely, aca and ada. If multiple 
+                    longest palindromic substring exists, return any one of them.
+                    </p>
+                    <br>
+                    <h4>Example 1:</h4>
+            
+                       <p><b>Input:</b>  s = "babad" <br>
+                        <b>Output:</b>  "bab" <br>
+                        <b>Explanation:</b> "aba" is also a valid answer.</p><br> <br>
+                    <h3><a href = "https://leetcode.com/problems/longest-palindromic-substring" target="_blank" ><i>Try this problem</i> </a></h3> <br><br>
+            
+                    <h2>Solution</h2>
+                    <div>
+                        <p class="nameabout"> 
+                        The dynamic programming solution for this problem takes O(n^2) time and O(n^2) space. This post will discuss another approach to solve this problem that 
+                        doesn&apos;t require any extra space.
+                        <br>
+                        The idea is simple and effective for each character in the given string, consider it the midpoint of a palindrome and expand in both directions to find 
+                        the maximum length palindrome. For an even length palindrome, consider every adjacent pair of characters as the midpoint.</p>
+                    </div>
+                    <br><br>
+                    <h3>Python Implementation</h3>
+                    <div class="code">
+                        <pre>
+            # Expand in both directions of `low` and `high` to find maximum length palindrome
+            def expand(s, low, high):
+                length = len(s)
+             
+                # expand in both directions
+                while low >= 0 and high < length and s[low] == s[high]:
+                    low = low - 1
+                    high = high + 1
+             
+                # return palindromic substring
+                return s[low + 1:high]
+             
+             
+            # Function to find the longest palindromic substring in `O(n²)` time and `O(1)` space
+            def findLongestPalindromicSubstring(s):
+             
+                # base case
+                if not s:
+                    return ''
+             
+                # `max_str` stores the maximum length palindromic substring found so far
+                max_str = ''
+             
+                # `max_length` stores the maximum length of palindromic
+                # substring found so far
+                max_length = 0
+             
+                # consider every character of the given string as a midpoint and expand
+                # in both directions to find maximum length palindrome
+             
+                for i in range(len(s)):
+             
+                    # find the longest odd length palindrome with `s[i]` as a midpoint
+                    curr_str = expand(s, i, i)
+                    curr_length = len(curr_str)
+             
+                    # update maximum length palindromic substring if the odd length
+                    # palindrome has a greater length
+             
+                    if curr_length > max_length:
+                        max_length = curr_length
+                        max_str = curr_str
+             
+                    # Find the longest even length palindrome with `s[i]` and `s[i+1]` as
+                    # midpoints. Note that an even length palindrome has two midpoints.
+             
+                    curr_str = expand(s, i, i + 1)
+                    curr_length = len(curr_str)
+             
+                    # update maximum length palindromic substring if even length
+                    # palindrome has a greater length
+             
+                    if curr_length > max_length:
+                        max_length = curr_length
+                        max_str = curr_str
+             
+                return max_str
+             
+             
+            if __name__ == '__main__':
+             
+                s = 'ABDCBCDBDCBBC'
+             
+                print(f'The longest palindromic substring of {s} is',
+                        findLongestPalindromicSubstring(s))
+                        </pre>
+            
+                    </div><br><br>
+                    <h3>Video Tutorial</h3><br>
+                    <video controls src="video/Longest Palindromic Substring - Python - Leetcode 5.mp4"></video>
+               
+                      
+                  </div> 
+                  
+                    </div>
+
+            </div>
+            <footer>
+                <p>
+                  Created By Bruk Mekonnen
+                </p>
+              </footer>
+      </body>
+</html>

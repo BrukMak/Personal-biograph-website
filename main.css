@@ -22,7 +22,9 @@ html {
     text-decoration: none;
     position: relative;
   }
-  
+  u{
+    color: blue;
+  }
   h1 {
     text-align: left;
     font-size: 40px;
@@ -30,11 +32,13 @@ html {
     font-weight: normal;
     margin-bottom: 30px;
   }
-  
+  body{
+    background-image: url(images/bg.jpg)
+  }
   nav {
     position: fixed;
     overflow: hidden;
-    background: #1799b6;
+    background: #286cff;
     -webkit-box-shadow: 9px 9px 35px -8px rgba(0, 0, 0, 0.69);
     -moz-box-shadow: 9px 9px 35px -8px rgba(0, 0, 0, 0.69);
     box-shadow: 9px 9px 35px -8px rgba(0, 0, 0, 0.69);
@@ -50,10 +54,14 @@ html {
     border-radius: 50%;
     margin-top: 30px;
     width: 170px;
-    height: 200px;
+    height: 230px;
+  }
+  hr{
+    width :70%;
   }
   
   #headname {
+    color: white;
     font-size: 30px;
     font-family: "Ma Shan Zheng";
     margin-top: 20px;
@@ -91,15 +99,18 @@ html {
   }
   
   .home {
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 50px;
-    margin-left: 50px;
+    margin-left: 80px;
+    margin-right: 200px;
+    
   }
-  
+ 
   .home img {
-    margin-top: 100px;
-    width: 250px;
-    height: 250px;
+    margin-left: 200px;
+    margin-top: 50px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
   }
   
@@ -108,6 +119,7 @@ html {
     font-size: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
+    text-align: center;
   }
   a
   .nameabout {
@@ -117,6 +129,7 @@ html {
     margin-right: 50px;
     margin-left: 50px;
     font-size: 26px;
+    margin-bottom: 20px;
   }
   
   .socialicon img {
@@ -126,7 +139,8 @@ html {
   }
   
   .about {
-    text-align: center;
+
+
     margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;
@@ -193,7 +207,7 @@ html {
   }
   
   .services {
-    text-align: center;
+    
     margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;
@@ -234,17 +248,55 @@ html {
     margin-right: 20px;
     margin-bottom: 30px;
   }
-  
+  .form{
+    text-align: center;
+    
+  }
+  input{
+    width: 400px;
+    
+  }
+  .message input{
+    height: 200px;
+  }
+  .sub input{
+    width: 90px;
+    height: 30px;
+    background-color: #1799b6;
+    border-radius: 10%;
+
+  }
   .contact {
     margin-left: 50px;
   }
-  
-  .contact-socialicon {
-    text-align: center;
-    margin-top: 150px;
-    margin-bottom: 20px;
+  .message input::placeholder{
+    position: absolute;
+
+  }
+  .code{
+    position: relative;
+    margin-top: 30px;
+    background-color: #dbdbdb;
+    height: 450px;
+    width: fit-content;
+    overflow: auto;
   }
   
+  .contact-socialicon {
+    /* text-align: center; */
+    margin-left: 250px; 
+    margin-top: 120px;
+    margin-bottom: 20px;
+    
+    
+  }
+  
+  .contact-socialicon img{
+    
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+  }
   /* /////////////////////footer///////////////////////////////// */
   
   footer p {
@@ -271,7 +323,11 @@ html {
       margin-bottom: 60px;
     }
   }
-  
+  video{
+    height: 400px;
+    width: 720px;
+    
+  }
   @media screen and (max-width: 600px) {
     nav {
       display: none;
@@ -279,6 +335,8 @@ html {
   
     .main {
       margin: 0;
+      
+      
     }
   
     .skills {
@@ -290,4 +348,9 @@ html {
       height: 100%;
       margin-bottom: 60px;
     }
+  }
+  .experience{
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
