@@ -159,6 +159,7 @@ html {
     text-align: left;
     margin-bottom: 5px;
     margin-top: 20px;
+    
   }
   
   .html {
@@ -167,7 +168,8 @@ html {
     font-size: 25px;
     height: 100%;
     width: 65%;
-    background-color: #1799b6;
+    background-color:blue;
+    color: beige;
   }
   
   .py {
@@ -177,7 +179,8 @@ html {
     font-size: 25px;
     height: 100%;
     width: 80%;
-    background-color: #1799b6;
+    background-color: blue;
+    color: beige;
   }
   .fl {
     border-radius: 20px;
@@ -185,7 +188,8 @@ html {
     font-size: 25px;
     height: 100%;
     width: 65%;
-    background-color: #1799b6;
+    background-color: blue;
+    color: beige;
   }
   
   .md {
@@ -194,7 +198,8 @@ html {
     height: 100%;
     border-radius: 20px;
     width: 60%;
-    background-color: #1799b6;
+    background-color: blue;
+    color: beige;
   }
   
   .jm {
@@ -203,7 +208,8 @@ html {
     font-size: 25px;
     height: 100%;
     width: 65%;
-    background-color: #1799b6;
+    background-color: blue ;
+    color: beige;
   }
   
   .services {
